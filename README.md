@@ -6,5 +6,5 @@ Car Rent App allows its users to rent cars, displays basic information for each 
 [![Watch the video]](https://drive.google.com/file/d/19sOiazSm1p7go5MQTJwkdsWm1tY4QOlG/view?usp=drive_link)
 
 ## Screen Shots
-![screen1](https://github.com/amlmousa123/car_rent_app/assets/104324924/42a7457e-cfb7-4cff-8eba-32aa2e0cd604 | width=100)
+![screen1](https://github.com/amlmousa123/car_rent_app/assets/104324924/42a7457e-cfb7-4cff-8eba-32aa2e0cd604.jpeg | width=100)
 
