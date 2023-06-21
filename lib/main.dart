@@ -1,18 +1,30 @@
-import 'package:car_rent_app/views/welcome_view.dart';
+import 'package:car_rent_app/core/global/theme/theme_data.dart';
+import 'package:car_rent_app/core/utills/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp(
+    appRouter: AppRouter(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppRouter appRouter;
+  const MyApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: WelcomeView(),
-    );
+    return ScreenUtilInit(
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: ((context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: getThemeData(),
+            onGenerateRoute: appRouter.generateRoute,
+          );
+        }));
   }
 }

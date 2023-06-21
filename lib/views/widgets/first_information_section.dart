@@ -1,5 +1,7 @@
-import 'package:car_rent_app/constants.dart';
+import 'package:car_rent_app/core/constants/colors.dart';
+import 'package:car_rent_app/core/utills/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FirstInfoSection extends StatelessWidget {
@@ -7,8 +9,10 @@ class FirstInfoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context).textTheme;
+    var size = MediaQuery.of(context).size;
     return Container(
-      height: MediaQuery.of(context).size.height * .31,
+      height: size.height * .29,
       decoration: BoxDecoration(
         color: lightGery,
         borderRadius: BorderRadius.circular(20),
@@ -16,46 +20,39 @@ class FirstInfoSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'NEARST CAR',
-            style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w400,
-                color: grey,
-                letterSpacing: 3),
+            style: theme.bodySmall!.copyWith(letterSpacing: 3),
           ),
-          Image.asset('assets/images/car2.png'),
-          const Text(
+          SizedBox(height: size.height * .15, child: Image.asset(car2)),
+          Text(
             'Fortuner GR',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
+            style: theme.bodyLarge!.copyWith(fontSize: 18),
           ),
           Row(
             children: [
-              SvgPicture.asset('assets/icons/gps.svg'),
-              const Text(
+              SvgPicture.asset(gps),
+              Text(
                 ' >870km',
-                style: TextStyle(fontSize: 11, color: grey),
+                style: theme.bodySmall,
               ),
-              const SizedBox(
-                width: 15,
+              SizedBox(
+                width: 15.w,
               ),
               SvgPicture.asset(
-                'assets/icons/diesel.svg',
+                diesel,
               ),
-              const Text(
+              Text(
                 '50L',
-                style: TextStyle(fontSize: 11, color: grey),
+                style: theme.bodySmall,
               ),
               const Spacer(),
-              const Text(
+              Text(
                 '\$ 45,00/h',
-                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+                style: theme.bodySmall!.copyWith(fontWeight: FontWeight.w600),
               ),
-              const SizedBox(
-                width: 5,
+              SizedBox(
+                width: 5.w,
               )
             ],
           )

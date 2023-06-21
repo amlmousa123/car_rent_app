@@ -1,3 +1,4 @@
+import 'package:car_rent_app/core/utills/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -6,13 +7,13 @@ class BarHomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 20),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          BarRowItem(iconPath: 'assets/icons/info.svg', text: 'Information'),
-          BarRowItem(iconPath: 'assets/icons/bell.svg', text: 'Notifaction')
+          BarRowItem(iconPath: info, text: 'Information'),
+          BarRowItem(iconPath: bell, text: 'Notifaction')
         ],
       ),
     );
@@ -33,7 +34,7 @@ class BarRowItem extends StatelessWidget {
         ),
         Text(
           text,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          style: Theme.of(context).textTheme.bodyLarge,
         )
       ],
     );

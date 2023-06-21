@@ -3,38 +3,28 @@ import 'package:car_rent_app/views/widgets/first_information_section.dart';
 import 'package:car_rent_app/views/widgets/second_infomation_section.dart';
 import 'package:car_rent_app/views/widgets/third_information_section.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: HomeViewBody(),
-    );
-  }
-}
-
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(20),
-      child: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        minimum: const EdgeInsets.all(20),
         child: Column(
           children: [
-            BarHomeView(),
-            FirstInfoSection(),
+            const BarHomeView(),
+            const FirstInfoSection(),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
-            SecondInfoSection(),
+            const SecondInfoSection(),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
-            ThirdInfoSection()
+            const ThirdInfoSection()
           ],
         ),
       ),

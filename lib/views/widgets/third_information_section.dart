@@ -1,5 +1,7 @@
-import 'package:car_rent_app/constants.dart';
+import 'package:car_rent_app/core/constants/colors.dart';
+import 'package:car_rent_app/core/utills/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ThirdInfoSection extends StatelessWidget {
@@ -8,24 +10,23 @@ class ThirdInfoSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .29,
+      height: MediaQuery.of(context).size.height * .27,
       width: double.infinity,
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(20),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(
             children: [
               Text(
                 'More Cars',
-                style: TextStyle(
-                    fontSize: 12, color: grey, fontWeight: FontWeight.w400),
+                style: Theme.of(context).textTheme.bodySmall,
               ),
-              Spacer(),
-              Icon(
+              const Spacer(),
+              const Icon(
                 Icons.more_horiz,
                 color: grey,
               )
@@ -34,20 +35,20 @@ class ThirdInfoSection extends StatelessWidget {
           SectionItem(
             text: 'Corolla Cross',
             speed: ' >870km',
-            iconPath: 'assets/icons/diesel.svg',
+            iconPath: diesel,
             secText: ' 50L',
           ),
           SizedBox(
-            height: 15,
+            height: 15.h,
           ),
           Divider(
-            height: 1.5,
+            height: 1.5.h,
             color: fontColor,
           ),
           SectionItem(
             text: 'Ionic 5',
             speed: ' >8km',
-            iconPath: 'assets/icons/battery.svg',
+            iconPath: battery,
             secText: ' 80%',
           ),
         ]),
@@ -69,6 +70,7 @@ class SectionItem extends StatelessWidget {
   final String secText;
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: Row(
@@ -76,22 +78,18 @@ class SectionItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                text,
-                style: const TextStyle(
-                    fontSize: 20, fontWeight: FontWeight.bold, color: myWhite),
-              ),
+              Text(text, style: Theme.of(context).textTheme.labelMedium),
               Row(children: [
                 SvgPicture.asset(
-                  'assets/icons/gps.svg',
+                  gps,
                   color: mGrey,
                 ),
                 Text(
                   speed,
-                  style: const TextStyle(fontSize: 11, color: mGrey),
+                  style: theme.bodySmall!.copyWith(color: mGrey),
                 ),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 15.w,
                 ),
                 SvgPicture.asset(
                   iconPath,
@@ -99,15 +97,15 @@ class SectionItem extends StatelessWidget {
                 ),
                 Text(
                   secText,
-                  style: const TextStyle(fontSize: 11, color: mGrey),
+                  style: theme.bodySmall!.copyWith(color: mGrey),
                 ),
               ]),
             ],
           ),
           const Spacer(),
           Container(
-            width: 30,
-            height: 30,
+            width: 30.w,
+            height: 30.h,
             decoration:
                 const BoxDecoration(color: myWhite, shape: BoxShape.circle),
             child: const Icon(Icons.arrow_forward),

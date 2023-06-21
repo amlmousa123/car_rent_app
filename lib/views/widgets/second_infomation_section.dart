@@ -1,5 +1,6 @@
-import 'package:car_rent_app/constants.dart';
-import 'package:car_rent_app/views/details_view.dart';
+import 'package:car_rent_app/core/constants/colors.dart';
+import 'package:car_rent_app/core/constants/strings.dart';
+import 'package:car_rent_app/core/utills/assets.dart';
 import 'package:flutter/material.dart';
 
 class SecondInfoSection extends StatelessWidget {
@@ -7,44 +8,47 @@ class SecondInfoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context).textTheme;
+    var size = MediaQuery.of(context).size;
     return Row(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * .24,
-          width: MediaQuery.of(context).size.width * .41,
+          height: size.height * .21,
+          width: size.width * .4,
           decoration: BoxDecoration(
               color: lightGery, borderRadius: BorderRadius.circular(20)),
-          child: const Column(
+          child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/user.png'),
-                  radius: 25,
+                  backgroundImage: AssetImage(user),
+                  radius: size.width * .098,
+                  backgroundColor: myWhite,
                 ),
                 Text(
                   'Jane Cooper',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: theme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
                 ),
                 Text(
                   '\$ 4,253',
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  style:
+                      theme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
                 )
               ]),
         ),
         const Spacer(),
         InkWell(
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const DetailsView()));
+            Navigator.of(context).pushNamed(detailsScreen);
           },
           child: Container(
-            height: MediaQuery.of(context).size.height * .24,
-            width: MediaQuery.of(context).size.width * .41,
+            height: size.height * .21,
+            width: size.width * .4,
             decoration: BoxDecoration(
-              image: const DecorationImage(
+              image: DecorationImage(
                   image: AssetImage(
-                    'assets/images/map.png',
+                    map,
                   ),
                   fit: BoxFit.fill),
               borderRadius: BorderRadius.circular(20),

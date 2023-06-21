@@ -1,4 +1,4 @@
-import 'package:car_rent_app/constants.dart';
+import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -13,20 +13,22 @@ class HorizentalListItem extends StatelessWidget {
   final String subTitle;
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context).textTheme;
+    var size = MediaQuery.of(context).size;
     return Container(
-      width: MediaQuery.of(context).size.width * .4,
-      height: MediaQuery.of(context).size.height * .2,
+      width: size.width * .36,
+      height: size.height * .2,
       decoration: BoxDecoration(
           border: Border.all(width: 1, color: mGrey),
           borderRadius: BorderRadius.circular(10)),
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: 25,
-              height: 25,
+              width: size.width * .077,
+              height: size.height * .033,
               child: SvgPicture.asset(
                 iconPath,
                 color: myBlack,
@@ -37,13 +39,11 @@ class HorizentalListItem extends StatelessWidget {
             ),
             Text(
               title,
-              style: const TextStyle(
-                  fontSize: 14, fontWeight: FontWeight.bold, color: myBlack),
+              style: theme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
             ),
             Text(
               subTitle,
-              style: const TextStyle(
-                  fontSize: 8, fontWeight: FontWeight.w400, color: grey),
+              style: theme.bodySmall!.copyWith(fontSize: 8),
             )
           ],
         ),
