@@ -1,16 +1,17 @@
-# car_rent_app
+# car_rent_app 
 
-A new Flutter project.
+Car Rent App allows its users to rent cars, displays basic information for each car and its location, provides the user to track the car’s path
 
-## Getting Started
+## Demo video
+[![Watch the video]](https://drive.google.com/file/d/19sOiazSm1p7go5MQTJwkdsWm1tY4QOlG/view?usp=drive_link)
 
-This project is a starting point for a Flutter application.
+## Screen Shots
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://github.com/amlmousa123/car_rent_app/assets/104324924/42a7457e-cfb7-4cff-8eba-32aa2e0cd604" width="400">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/amlmousa123/car_rent_app/assets/104324924/ac74ba7a-dd6c-40fb-9e55-5dd3dcd82efa" width="400">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/amlmousa123/car_rent_app/assets/104324924/0642aaec-fcf0-4edf-9133-ae647caddeda" width="400">
+
+## Future work
+This application is only a UI currently, the next step is to link this UI with a database 
