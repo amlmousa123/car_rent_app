@@ -18,11 +18,11 @@ class HomeView extends StatelessWidget {
             const BarHomeView(),
             const FirstInfoSection(),
             SizedBox(
-              height: 20.h,
+              height: 15.h,
             ),
             const SecondInfoSection(),
             SizedBox(
-              height: 20.h,
+              height: 15.h,
             ),
             const ThirdInfoSection()
           ],

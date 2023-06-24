@@ -2,6 +2,7 @@ import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/views/widgets/custom_button.dart';
 import 'package:car_rent_app/views/widgets/horizental_list_item.dart';
 import 'package:car_rent_app/views/widgets/list_item_model.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,13 +26,13 @@ class ThirdDetailsSection extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
-              'Features',
+              'features'.tr(),
               style: theme.labelMedium!.copyWith(color: myBlack),
             ),
             SizedBox(
-              height: 15.h,
+              height: 10.h,
             ),
-            const SizedBox(child: HorizentalList()),
+            SizedBox(height: size.height * .12, child: HorizentalList()),
             Padding(
               padding: const EdgeInsets.only(right: 30, top: 20, bottom: 20),
               child: Row(
@@ -53,14 +54,14 @@ class ThirdDetailsSection extends StatelessWidget {
                                 .copyWith(fontWeight: FontWeight.w400),
                           ),
                           TextSpan(
-                            text: '/day',
+                            text: 'day'.tr(),
                             style: theme.bodyMedium,
                           )
                         ]),
                   ),
                   const Spacer(),
                   CustomButton(
-                    text: 'Book Now',
+                    text: 'bookNow'.tr(),
                     width: MediaQuery.of(context).size.width * .35,
                     height: MediaQuery.of(context).size.height * 1 / 14,
                     onPressed: () {},

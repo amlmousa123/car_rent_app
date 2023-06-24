@@ -17,7 +17,6 @@ class HorizentalListItem extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       width: size.width * .36,
-      height: size.height * .2,
       decoration: BoxDecoration(
           border: Border.all(width: 1, color: mGrey),
           borderRadius: BorderRadius.circular(10)),

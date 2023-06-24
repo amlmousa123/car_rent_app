@@ -2,6 +2,7 @@ import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/constants/strings.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
 import 'package:car_rent_app/views/widgets/custom_button.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeView extends StatelessWidget {
@@ -29,14 +30,14 @@ class WelcomeView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Premium cars.\nEnjoy the luxury',
+                        "welcomeTitle".tr(),
                         style: theme.titleLarge,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       Text(
-                        'Premium and prestige car daily rental.\nExperience the thrill at a lower price',
+                        "welcomeSubTitle".tr(),
                         style: theme.bodyMedium!.copyWith(color: subTitleColor),
                       ),
                       const SizedBox(
@@ -50,7 +51,7 @@ class WelcomeView extends StatelessWidget {
                         borderRadius: 30,
                         width: size.width,
                         height: size.height * 1 / 14,
-                        text: 'Let\'s Go',
+                        text: "letsGo".tr(),
                         textStyle: theme.labelMedium!.copyWith(color: myBlack),
                       )
                     ],

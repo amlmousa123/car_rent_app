@@ -1,5 +1,6 @@
 import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -22,13 +23,13 @@ class SecondDetailsSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Fortuner GR', style: theme.textTheme.labelLarge),
+              Text('carName'.tr(), style: theme.textTheme.labelLarge),
               Row(children: [
                 SvgPicture.asset(
                   gps,
                   color: mGrey,
                 ),
-                Text(' >870km',
+                Text('speed1'.tr(),
                     style: theme.textTheme.bodySmall!.copyWith(color: mGrey)),
                 const SizedBox(
                   width: 15,
@@ -38,7 +39,7 @@ class SecondDetailsSection extends StatelessWidget {
                   color: mGrey,
                 ),
                 Text(
-                  ' 50L',
+                  'dieselRate'.tr(),
                   style: theme.textTheme.bodySmall!.copyWith(color: mGrey),
                 ),
               ]),

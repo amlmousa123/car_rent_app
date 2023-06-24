@@ -1,4 +1,5 @@
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,8 +13,8 @@ class BarHomeView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          BarRowItem(iconPath: info, text: 'Information'),
-          BarRowItem(iconPath: bell, text: 'Notifaction')
+          BarRowItem(iconPath: info, text: "information".tr()),
+          BarRowItem(iconPath: bell, text: "notifaction".tr())
         ],
       ),
     );

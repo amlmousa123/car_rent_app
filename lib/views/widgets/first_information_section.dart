@@ -1,5 +1,6 @@
 import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,7 +13,7 @@ class FirstInfoSection extends StatelessWidget {
     var theme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * .29,
+      height: size.height * .3,
       decoration: BoxDecoration(
         color: lightGery,
         borderRadius: BorderRadius.circular(20),
@@ -21,19 +22,19 @@ class FirstInfoSection extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            'NEARST CAR',
+            'nearstCar'.tr(),
             style: theme.bodySmall!.copyWith(letterSpacing: 3),
           ),
           SizedBox(height: size.height * .15, child: Image.asset(car2)),
           Text(
-            'Fortuner GR',
-            style: theme.bodyLarge!.copyWith(fontSize: 18),
+            'carName'.tr(),
+            style: theme.bodyLarge!.copyWith(fontSize: 18.sp),
           ),
           Row(
             children: [
               SvgPicture.asset(gps),
               Text(
-                ' >870km',
+                'speed1'.tr(),
                 style: theme.bodySmall,
               ),
               SizedBox(
@@ -43,12 +44,12 @@ class FirstInfoSection extends StatelessWidget {
                 diesel,
               ),
               Text(
-                '50L',
+                'dieselRate'.tr(),
                 style: theme.bodySmall,
               ),
               const Spacer(),
               Text(
-                '\$ 45,00/h',
+                'price1'.tr(),
                 style: theme.bodySmall!.copyWith(fontWeight: FontWeight.w600),
               ),
               SizedBox(

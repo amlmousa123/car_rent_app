@@ -1,5 +1,6 @@
 import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -22,7 +23,7 @@ class ThirdInfoSection extends StatelessWidget {
           Row(
             children: [
               Text(
-                'More Cars',
+                'moreCars'.tr(),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               const Spacer(),
@@ -33,10 +34,10 @@ class ThirdInfoSection extends StatelessWidget {
             ],
           ),
           SectionItem(
-            text: 'Corolla Cross',
-            speed: ' >870km',
+            text: 'corollaCross'.tr(),
+            speed: 'speed2'.tr(),
             iconPath: diesel,
-            secText: ' 50L',
+            secText: 'dieselRate'.tr(),
           ),
           SizedBox(
             height: 15.h,
@@ -46,10 +47,10 @@ class ThirdInfoSection extends StatelessWidget {
             color: fontColor,
           ),
           SectionItem(
-            text: 'Ionic 5',
-            speed: ' >8km',
+            text: 'ionic5'.tr(),
+            speed: 'speed3'.tr(),
             iconPath: battery,
-            secText: ' 80%',
+            secText: 'batteryRate'.tr(),
           ),
         ]),
       ),

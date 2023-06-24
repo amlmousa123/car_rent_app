@@ -1,6 +1,7 @@
 import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/constants/strings.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class SecondInfoSection extends StatelessWidget {
@@ -27,11 +28,11 @@ class SecondInfoSection extends StatelessWidget {
                   backgroundColor: myWhite,
                 ),
                 Text(
-                  'Jane Cooper',
+                  'userName'.tr(),
                   style: theme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
                 ),
                 Text(
-                  '\$ 4,253',
+                  'userPrice'.tr(),
                   style:
                       theme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
                 )

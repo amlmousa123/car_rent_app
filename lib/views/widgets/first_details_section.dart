@@ -1,5 +1,6 @@
 import 'package:car_rent_app/core/constants/colors.dart';
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -45,11 +46,11 @@ class FirstDetailsSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10), color: myWhite),
                   child: Column(children: [
                     Text(
-                      'Fortuner GR',
+                      'carName'.tr(),
                       style: theme.bodyLarge!
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
-                    Text('< 3km',
+                    Text('distance'.tr(),
                         style: theme.bodySmall!.copyWith(color: subTitleColor)),
                   ]),
                 ),

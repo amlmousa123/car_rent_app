@@ -1,4 +1,5 @@
 import 'package:car_rent_app/core/utills/assets.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ListItemModel {
   final String iconPath;
@@ -11,12 +12,10 @@ class ListItemModel {
 
 List<ListItemModel> data = [
   ListItemModel(
-      iconPath: diesel,
-      title: 'Diesel',
-      subTitle: 'Common Rail Fuel Injection'),
+      iconPath: diesel, title: 'diesel'.tr(), subTitle: 'commonRail'.tr()),
   ListItemModel(
       iconPath: acceleration,
-      title: 'Acceleration',
-      subTitle: '0 - 100km / 11s'),
-  ListItemModel(iconPath: cool, title: 'Cool', subTitle: 'Temp Control on seat')
+      title: 'acceleration'.tr(),
+      subTitle: 'accelerationRate'.tr()),
+  ListItemModel(iconPath: cool, title: 'cool'.tr(), subTitle: 'temp'.tr())
 ];
